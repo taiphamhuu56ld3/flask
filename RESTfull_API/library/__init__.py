@@ -4,7 +4,7 @@ from .model import Students, Books, Author, Category, Borrows
 from .extension import db, ma
 
 import os
-def create_db(app):
+def create_db(app: Flask):
     with app.app_context():
         if not os.path.exists("library/library.db"):
             db.create_all()
